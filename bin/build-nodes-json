@@ -63,7 +63,6 @@ def main():
         auth_url=auth_url
     )
 
-
     bmc_id = [ s.id for s in nova.servers.list() if bmc_base in s.name ]
     bm_id = [ s.id for s in nova.servers.list() if baremetal_base in s.name ]
 
