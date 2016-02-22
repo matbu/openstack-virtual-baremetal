@@ -75,6 +75,8 @@ EOF
 index=$(($index+1))
 done
 
+os-net-config -c /etc/os-net-config/config.yaml
+
 # It will be automatically started because the bmc services depend on it,
 # but to avoid confusion also explicitly enable it.
 systemctl enable config-bmc-ips
